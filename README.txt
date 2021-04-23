@@ -13,6 +13,25 @@ Input: python seatmap_parser.py [FILENAME]
 Output: FILENAME_parsed.json
 
 Description:
+```
+{
+	flight_number:13233232, start_location:"LAX", end_location:"LAX",departure_iso
+	warnings:["list of all warnings"]
+	plane_seat_map:[
+			row_number:"some row number",
+			cabin_type:"FIrst Business"
+			seats:[
+				{
+				seat_number:""
+				seat_ref:"some hash referencing the seat"
+				features:["A LIST OF FEATURES"]
+				price:"{value} USD"
+				is_available:true				
+				}
+			]
+		]
+}
+```
 Write a python script that parses the XML seatmap files included in this folder (seatmap1.xml, seatmap2.xml) into a standardized JSON format that outputs the seatmap (by row) with the following properties at minimum:
 	- Seat/Element type (Seat, Kitchen, Bathroom, etc)
 	- Seat id (17A, 18A)
